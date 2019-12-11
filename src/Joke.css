@@ -1,0 +1,13 @@
+.joke-container {
+    display: flex;
+    height: 30vw;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+p {
+    text-align: center;
+
+}

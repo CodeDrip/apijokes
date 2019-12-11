@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Joke from "./Joke.js"  
 
 
 
@@ -21,10 +22,8 @@ class App extends Component {
       })
       .then(res => res.json())
       .then(res => {
-        // console.log(res.joke)
+  
         this.setState({ apiData: res})
-        // console.log({ apiData: res})
-        // console.log(this.state.apiData)
         console.log(this.state.apiData.joke)    
       })
     }
@@ -32,14 +31,24 @@ class App extends Component {
   render() {
     let actualJoke = this.state.apiData.joke
     
+    // .map(target => {
+    //   return <Joke />
+    // })
+    
+    
+    
+    //.joke
+    
     return (
-      <div className="App">
+      <div>
         <header className="App-header">
           <h1 className="App-title">DAD JOKIE JOKES</h1>
         </header>
-        <div>
-          {actualJoke}
-        </div>
+        <main>
+          <article className="joke-container">
+            <Joke info = {actualJoke}/>
+          </article>
+        </main>
       </div>
     );
   }
