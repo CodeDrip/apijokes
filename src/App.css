@@ -14,16 +14,20 @@ main {
 
 }
 
+
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 5vw;
-  padding: .5em;
-  color: white;
+  background-color: #05021E;
+  height: 7vw;
+  padding: 1em;
+  color: rgb(104, 171, 148);
+  /* border: 2px solid rgba(255, 0, 0, 0.249); */
+  border-bottom: 2px solid rgba(255, 0, 0, 0.249);
 }
 
 .App-title {
@@ -42,6 +46,8 @@ main {
   align-items: center;
   margin: 20vh auto;
   border: 2px solid rgba(255, 0, 0, 0.249);
+  background: rgba(0, 0, 33, 0.66);
+  padding: 0 2em;
 }
 
 @keyframes App-logo-spin {

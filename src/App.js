@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Joke from "./Joke.js"  
+import NewButton from "./NewButton.js"  
 
 
 
@@ -30,6 +31,7 @@ class App extends Component {
 
   render() {
     let actualJoke = this.state.apiData.joke
+    // let buttonNew = 
     
     // .map(target => {
     //   return <Joke />
@@ -42,13 +44,17 @@ class App extends Component {
     return (
       <div>
         <header className="App-header">
-          <h1 className="App-title">DAD JOKIE JOKES</h1>
+          <h1 className="App-title">JOKIE JOKES</h1>
         </header>
         <main>
           <article className="joke-container">
             <Joke info = {actualJoke}/>
           </article>
+          <button onClick={() => {
+            
+          }}>New</button>
         </main>
+
       </div>
     );
   }
