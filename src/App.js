@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Joke from "./Joke.js"  
-import NewButton from "./NewButton.js"  
 
 
 
@@ -14,7 +13,8 @@ class App extends Component {
       super()
       this.state = {
         apiData: []
-      } 
+      }
+      this.handleClick = this.handleClick.bind(this) 
     }
     
     componentDidMount() {
@@ -29,35 +29,71 @@ class App extends Component {
       })
     }
 
+     handleClick() {
+      console.log(`We Got Action`);
+      this.componentDidMount();
+    }
+
   render() {
+    
     let actualJoke = this.state.apiData.joke
-    // let buttonNew = 
-    
-    // .map(target => {
-    //   return <Joke />
-    // })
     
     
-    
-    //.joke
+      
+
+
     
     return (
       <div>
         <header className="App-header">
-          <h1 className="App-title">JOKIE JOKES</h1>
+          <h1 className="App-title">DAD JOKIE JOKES</h1>
         </header>
         <main>
           <article className="joke-container">
             <Joke info = {actualJoke}/>
           </article>
-          <button onClick={() => {
-            
-          }}>New</button>
+          <button onClick={this.handleClick}>New Joke</button>
         </main>
-
       </div>
     );
   }
 }
 
 export default App;
+
+
+
+  //   componentDidMount() {
+  //     this.getPromise()
+  //  }
+
+  // this.getPromise() {
+  //   fetch(' https://icanhazdadjoke.com/', {
+  //       headers: { Accept: "application/json"}
+  //     })
+  //     .then(res => res.json())
+  //     .then(res => {
+  
+  //       this.setState({ apiData: res})
+  //       console.log(this.state.apiData.joke)    
+  //     })
+  //   }
+
+
+
+
+
+
+// this work too
+
+//   componentDidMount() {
+//     fetch(' https://icanhazdadjoke.com/', {
+//       headers: { Accept: "application/json"}
+//     })
+//     .then(res => res.json())
+//     .then(res => {
+
+//       this.setState({ apiData: res})
+//       console.log(this.state.apiData.joke)    
+//     })
+//   }
