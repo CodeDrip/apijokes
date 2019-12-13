@@ -6,7 +6,7 @@ body {
 
 main {
   /* display: flex; */
-  height: 60vw;
+  height: 40vw;
   width: 90vw;
   justify-content: center;
   align-items: center;
@@ -40,14 +40,23 @@ main {
 
 .joke-container {
   display: flex;
-  height: 30vw;
-  width: 90vw;
+  height: 20vw;
+  width: 50vw;
   justify-content: center;
   align-items: center;
   margin: 20vh auto;
   border: 2px solid rgba(255, 0, 0, 0.249);
   background: rgba(0, 0, 33, 0.66);
   padding: 0 2em;
+  border-radius: 5px;
+}
+
+.new-joke-but {
+  padding: 1em;
+  border-radius: 5px;
+  color: rgb(104, 171, 148);
+  background: rgba(255, 0, 0, 0.249);
+  border: 2px solid rgb(0, 0, 0);
 }
 
 @keyframes App-logo-spin {
