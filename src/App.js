@@ -15,13 +15,17 @@ class App extends Component {
       super()
       this.state = {
          apiData: [],
-        // jokeBag: [],
-        jokeCatch: []
+        jokeCatch: {},
+        jokeSave: []
+        
       }
-      this.handleClick = this.handleClick.bind(this) 
+      this.handleClick = this.handleClick.bind(this)
+      this.directJoke = this.directJoke.bind(this)
+      // this.jokeSave = this.jokeSave.bind(this)
+
     }
     
-    componentDidMount() {
+    componentWillMount() {
       fetch(' https://icanhazdadjoke.com/', {
         headers: { Accept: "application/json"}
       })
@@ -34,13 +38,22 @@ class App extends Component {
         //it logs ok
         console.log(this.jokePitch)  
         //get pitch in state
-        this.setState({ jokeCatch: this.jokePitch})  
+        // this.setState({ jokeCatch: this.jokePitch})  
       })
     }
 
      handleClick() {
       console.log(this.state.jokeCatch);
-      this.componentDidMount();
+      this.componentWillMount();
+      // this.directJoke();
+      // console.log(this.state.jokeSave);
+    }
+
+    directJoke() {
+      this.setState(
+        this.jokeSave.push(this.state.jokeCatch)
+      )
+      // console.log(this.state.jokeSave)
     }
 
   render() {
