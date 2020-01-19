@@ -1,11 +1,8 @@
-body {
-  background: rgb(15, 5, 24);
-  color: rgb(104, 171, 148);
-  text-align: center;
-}
+
 
 main {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
   height: 40vw;
   width: 90vw;
   justify-content: center;
@@ -22,10 +19,10 @@ main {
 }
 
 .App-header {
-  background-color: #05021E;
-  height: 7vw;
+  background-color: rgb(40, 40, 40);
+  height: 2vw;
   padding: 1em;
-  color: rgb(104, 171, 148);
+  color: white;
   /* border: 2px solid rgba(255, 0, 0, 0.249); */
   border-bottom: 2px solid rgba(255, 0, 0, 0.249);
 }
@@ -40,23 +37,33 @@ main {
 
 .joke-container {
   display: flex;
-  height: 20vw;
-  width: 50vw;
+  height: 10vw;
+  width: 30vw;
   justify-content: center;
   align-items: center;
   margin: 20vh auto;
-  border: 2px solid rgba(255, 0, 0, 0.249);
-  background: rgba(0, 0, 33, 0.66);
+  /* border: 2px solid rgba(255, 0, 0, 0.249); */
+  /* background: rgba(0, 0, 33, 0.66); */
   padding: 0 2em;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 1.3em;
+
+
 }
 
-.new-joke-but {
+button {
   padding: 1em;
   border-radius: 5px;
-  color: rgb(104, 171, 148);
-  background: rgba(255, 0, 0, 0.249);
+  font-size: 1.3em;
+  color: azure;
+  background-color: rgb(40, 40, 40);
   border: 2px solid rgb(0, 0, 0);
+  height: 4vw;
+  width: 12vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes App-logo-spin {

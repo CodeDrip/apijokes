@@ -20,7 +20,7 @@ class App extends Component {
         
       }
       this.handleClick = this.handleClick.bind(this)
-      this.directJoke = this.directJoke.bind(this)
+      // this.directJoke = this.directJoke.bind(this)
       // this.jokeSave = this.jokeSave.bind(this)
 
     }
@@ -38,7 +38,7 @@ class App extends Component {
         //it logs ok
         console.log(this.jokePitch)  
         //get pitch in state
-        // this.setState({ jokeCatch: this.jokePitch})  
+        this.setState({ jokeSave: [this.jokePitch]})  
       })
     }
 
@@ -46,15 +46,17 @@ class App extends Component {
       console.log(this.state.jokeCatch);
       this.componentWillMount();
       // this.directJoke();
-      // console.log(this.state.jokeSave);
+      console.log(this.state) 
+      console.log(this.state.jokeSave)  
+       
     }
 
-    directJoke() {
-      this.setState(
-        this.jokeSave.push(this.state.jokeCatch)
-      )
-      // console.log(this.state.jokeSave)
-    }
+    // directJoke() {
+    //   this.setState(
+    //     this.jokeSave.push(this.state.jokeCatch)
+    //   )
+    //   // console.log(this.state.jokeSave)
+    // }
 
   render() {
     
@@ -68,7 +70,7 @@ class App extends Component {
     return (
       <div>
         <header className="App-header">
-          <h1 className="App-title">DAD JOKIE JOKES</h1>
+          <h1 className="App-title">DAD JOKES</h1>
         </header>
         <main>
           <article className="joke-container">
