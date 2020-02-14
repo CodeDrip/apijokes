@@ -59,8 +59,6 @@ button {
   color: azure;
   background-color: rgb(40, 40, 40);
   border: 2px solid rgb(0, 0, 0);
-  height: 4vw;
-  width: 12vw;
   display: flex;
   justify-content: center;
   align-items: center;
